@@ -1,44 +1,23 @@
+<script setup lang="ts">
+import OperatorSimulation from '~~/components/atoms/OperatorSimulation.vue';
+</script>
+
 <template>
   <div>
-    <h2>Home</h2>
-    <p>
-      lorem ipsum
-      <!-- <div v-for="p in products">{{ p.title }}</div> -->
-    </p>
+    <h1 class="font-medium leading-tight text-5xl mt-0 mb-2 text-blue-600">
+      Homepage
+    </h1>
+
+    <OperatorSimulation />
+
     <NuxtLink to="/test">
-      TEST VIEW LINK
+      <button
+        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+      >
+        Test Page
+      </button>
     </NuxtLink>
   </div>
 </template>
 
-<script setup lang="ts">
-import {Product} from '../types/Product'
-const response = await useFetch<Array<Product>>("https://fakestoreapi.com/products")
-const products = response.data
 
-// products.value?.forEach(product => product.title)
-
-// const x = document.querySelector<HTMLButtonElement>('button')
-
-// x?.classList.add('f')
-
-// const users = ref<Users>([])
-
-// users.value.forEach(user => {
-//   user.prod
-// })
-
-// const article = {name: 'Poire', price: 30}
-
-// createArticle(article)
-
-// async function createArticle(article: {name: string, price: number}): Promise<boolean>{
-//   // fetch(../, article)
-//   // Call API
-//   return true
-// }
- </script>
-
-<!-- <script setup>
-const { data: products } = await useFetch("https://fakestoreapi.com/products");
-</script> -->
